@@ -10,8 +10,8 @@ import FirebaseAnalytics
 
 class CharListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    var charList = [Result]()
-    var offSetNumber = 0
+    private var charList = [Result]()
+    private var offSetNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
