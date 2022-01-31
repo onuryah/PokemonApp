@@ -18,10 +18,8 @@ class CharListVC: UIViewController {
         setDelegates()
         fetchDatas()
     }
-
-
-
 }
+
 
 extension CharListVC: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,7 +47,7 @@ extension CharListVC: UITableViewDelegate,UITableViewDataSource{
         tableView.dataSource = self
     }
     fileprivate func fetchDatas(){
-        let url = "https://pokeapi.co/api/v2/pokemon?offset="+"\(offSetNumber)"+"&limit=20"
+        let url = DataUrl.baseUrl+DataUrl.offSet+"\(offSetNumber)"+DataUrl.limit
         Webservice.fetchData(urlString: url, model: Characters.self) { results in
             DispatchQueue.main.async {
                 for data in results.results{
@@ -60,6 +58,4 @@ extension CharListVC: UITableViewDelegate,UITableViewDataSource{
         }
         offSetNumber = offSetNumber+20
     }
-    
-    
 }

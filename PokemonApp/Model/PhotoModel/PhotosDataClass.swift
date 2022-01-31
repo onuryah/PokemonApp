@@ -16,10 +16,6 @@ struct Welcome: Codable {
     let species: Species
 }
 
-
-
-
-
 struct GenerationV: Codable {
     let blackWhite: Sprites
 
@@ -28,7 +24,6 @@ struct GenerationV: Codable {
     }
 }
 
-// MARK: - GenerationIv
 struct GenerationIv: Codable {
     let diamondPearl, heartgoldSoulsilver, platinum: Sprites
 
@@ -39,7 +34,6 @@ struct GenerationIv: Codable {
     }
 }
 
-// MARK: - Versions
 struct Versions: Codable {
     let generationI: GenerationI
     let generationIi: GenerationIi
@@ -62,7 +56,7 @@ struct Versions: Codable {
     }
 }
 
-// MARK: - Sprites
+
 class Sprites: Codable {
     let backDefault: String
     let backFemale: String?
@@ -103,7 +97,6 @@ class Sprites: Codable {
     }
 }
 
-// MARK: - GenerationI
 struct GenerationI: Codable {
     let redBlue, yellow: RedBlue
 
@@ -113,7 +106,6 @@ struct GenerationI: Codable {
     }
 }
 
-// MARK: - RedBlue
 struct RedBlue: Codable {
     let backDefault, backGray, backTransparent, frontDefault: String
     let frontGray, frontTransparent: String
@@ -128,13 +120,11 @@ struct RedBlue: Codable {
     }
 }
 
-// MARK: - GenerationIi
 struct GenerationIi: Codable {
     let crystal: Crystal
     let gold, silver: Gold
 }
 
-// MARK: - Crystal
 struct Crystal: Codable {
     let backDefault, backShiny, backShinyTransparent, backTransparent: String
     let frontDefault, frontShiny, frontShinyTransparent, frontTransparent: String
@@ -151,7 +141,6 @@ struct Crystal: Codable {
     }
 }
 
-// MARK: - Gold
 struct Gold: Codable {
     let backDefault, backShiny, frontDefault, frontShiny: String
     let frontTransparent: String?
@@ -165,7 +154,6 @@ struct Gold: Codable {
     }
 }
 
-// MARK: - GenerationIii
 struct GenerationIii: Codable {
     let emerald: Emerald
     let fireredLeafgreen, rubySapphire: Gold
@@ -177,7 +165,6 @@ struct GenerationIii: Codable {
     }
 }
 
-// MARK: - Emerald
 struct Emerald: Codable {
     let frontDefault, frontShiny: String
 
@@ -187,7 +174,6 @@ struct Emerald: Codable {
     }
 }
 
-// MARK: - Home
 struct Home: Codable {
     let frontDefault: String
     let frontFemale: String?
@@ -202,7 +188,6 @@ struct Home: Codable {
     }
 }
 
-// MARK: - GenerationVii
 struct GenerationVii: Codable {
     let icons: DreamWorld
     let ultraSunUltraMoon: Home
@@ -213,7 +198,6 @@ struct GenerationVii: Codable {
     }
 }
 
-// MARK: - DreamWorld
 struct DreamWorld: Codable {
     let frontDefault: String
     let frontFemale: String?
@@ -224,12 +208,10 @@ struct DreamWorld: Codable {
     }
 }
 
-// MARK: - GenerationViii
 struct GenerationViii: Codable {
     let icons: DreamWorld
 }
 
-// MARK: - Other
 struct Other: Codable {
     let dreamWorld: DreamWorld
     let home: Home
@@ -242,7 +224,6 @@ struct Other: Codable {
     }
 }
 
-// MARK: - OfficialArtwork
 struct OfficialArtwork: Codable {
     let frontDefault: String
 
@@ -251,7 +232,6 @@ struct OfficialArtwork: Codable {
     }
 }
 
-// MARK: - Stat
 struct Stat: Codable {
     let baseStat, effort: Int
     let stat: Species
@@ -267,7 +247,6 @@ struct Species: Codable {
     let url: String
 }
 
-// MARK: - TypeElement
 struct TypeElement: Codable {
     let slot: Int
 }

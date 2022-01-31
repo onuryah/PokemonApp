@@ -16,11 +16,11 @@
 		4A31D26627A7F1D7002EB5DC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A31D26527A7F1D7002EB5DC /* AdSupport.framework */; };
 		4A410CD827A755A60074C32F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A410CD727A755A60074C32F /* GoogleService-Info.plist */; };
 		4A76FE9327A7ECEE0091FCD9 /* Pods_PokemonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0796D7C1C1CE4CD7018B0D /* Pods_PokemonApp.framework */; };
+		4ACF604F27A895F200124EC9 /* UrlClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACF604E27A895F200124EC9 /* UrlClass.swift */; };
 		4AD96B2327A6A7AD009F36E0 /* PicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD96B2227A6A7AD009F36E0 /* PicsCell.swift */; };
 		4AFCE03027A4335E0016B262 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCE02F27A4335E0016B262 /* WebService.swift */; };
 		4AFCE03227A433990016B262 /* DataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCE03127A433990016B262 /* DataClass.swift */; };
 		4AFCE03427A4344F0016B262 /* CharNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCE03327A4344F0016B262 /* CharNameCell.swift */; };
-		4AFCE03627A43A340016B262 /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCE03527A43A340016B262 /* UserSingleton.swift */; };
 		4AFCE03827A4401B0016B262 /* CharDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCE03727A4401B0016B262 /* CharDetailsVC.swift */; };
 		4AFCE03B27A4492F0016B262 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCE03A27A4492F0016B262 /* ExtensionString.swift */; };
 		4AFCE03D27A45E030016B262 /* PhotosDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCE03C27A45E030016B262 /* PhotosDataClass.swift */; };
@@ -40,11 +40,11 @@
 		4A15845127A43275002C2F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A31D26527A7F1D7002EB5DC /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		4A410CD727A755A60074C32F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4ACF604E27A895F200124EC9 /* UrlClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlClass.swift; sourceTree = "<group>"; };
 		4AD96B2227A6A7AD009F36E0 /* PicsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsCell.swift; sourceTree = "<group>"; };
 		4AFCE02F27A4335E0016B262 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		4AFCE03127A433990016B262 /* DataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataClass.swift; sourceTree = "<group>"; };
 		4AFCE03327A4344F0016B262 /* CharNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharNameCell.swift; sourceTree = "<group>"; };
-		4AFCE03527A43A340016B262 /* UserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
 		4AFCE03727A4401B0016B262 /* CharDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailsVC.swift; sourceTree = "<group>"; };
 		4AFCE03A27A4492F0016B262 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		4AFCE03C27A45E030016B262 /* PhotosDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDataClass.swift; sourceTree = "<group>"; };
@@ -118,11 +118,10 @@
 		4A15845827A43297002C2F82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4ACF605227A896ED00124EC9 /* PhotoModel */,
+				4ACF605027A896D000124EC9 /* WebService */,
+				4ACF604D27A895C800124EC9 /* CharsModelClass */,
 				4AFCE03927A4491D0016B262 /* ExtensionString */,
-				4AFCE02F27A4335E0016B262 /* WebService.swift */,
-				4AFCE03127A433990016B262 /* DataClass.swift */,
-				4AFCE03527A43A340016B262 /* UserSingleton.swift */,
-				4AFCE03C27A45E030016B262 /* PhotosDataClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +142,31 @@
 				4AFCE03727A4401B0016B262 /* CharDetailsVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		4ACF604D27A895C800124EC9 /* CharsModelClass */ = {
+			isa = PBXGroup;
+			children = (
+				4AFCE03127A433990016B262 /* DataClass.swift */,
+				4ACF604E27A895F200124EC9 /* UrlClass.swift */,
+			);
+			path = CharsModelClass;
+			sourceTree = "<group>";
+		};
+		4ACF605027A896D000124EC9 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				4AFCE02F27A4335E0016B262 /* WebService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		4ACF605227A896ED00124EC9 /* PhotoModel */ = {
+			isa = PBXGroup;
+			children = (
+				4AFCE03C27A45E030016B262 /* PhotosDataClass.swift */,
+			);
+			path = PhotoModel;
 			sourceTree = "<group>";
 		};
 		4AFCE03927A4491D0016B262 /* ExtensionString */ = {
@@ -304,13 +328,13 @@
 			files = (
 				4A15844827A43274002C2F82 /* CharListVC.swift in Sources */,
 				4AFCE03D27A45E030016B262 /* PhotosDataClass.swift in Sources */,
+				4ACF604F27A895F200124EC9 /* UrlClass.swift in Sources */,
 				4A15844427A43274002C2F82 /* AppDelegate.swift in Sources */,
 				4AFCE03427A4344F0016B262 /* CharNameCell.swift in Sources */,
 				4AFCE03827A4401B0016B262 /* CharDetailsVC.swift in Sources */,
 				4AFCE03227A433990016B262 /* DataClass.swift in Sources */,
 				4AFCE03B27A4492F0016B262 /* ExtensionString.swift in Sources */,
 				4AD96B2327A6A7AD009F36E0 /* PicsCell.swift in Sources */,
-				4AFCE03627A43A340016B262 /* UserSingleton.swift in Sources */,
 				4AFCE03027A4335E0016B262 /* WebService.swift in Sources */,
 				4A15844627A43274002C2F82 /* SceneDelegate.swift in Sources */,
 			);
